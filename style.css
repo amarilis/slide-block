@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.wrap{
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    background: red;
+    position: relative;
+}
+.left{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    left: -100vw;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 2;
+    background: green;
+    opacity: .7;
+    transition: 500ms;
+}
+.leftNull{
+    left: 0;
+}
+.right{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    right: -100vw;
+    top: 50%;
+    margin-top: -150px;
+    background: yellow;
+    transition: 500ms;
+}
+.rightNull{
+    right: 0;
+}

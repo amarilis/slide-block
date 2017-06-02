@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container"></div>
+
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+
+<script type="text/babel">
+    class LeftBlock extends React.Component {
+        handleShow() {
+            setTimeout(function () {
+                document.querySelector('.left').style.left = 0;
+            }, 1000);
+        }
+        render() {
+            this.handleShow()
+            return <div className="left"></div>;
+        }
+    }
+    class RightBlock extends React.Component {
+        handleShow() {
+            setTimeout(function () {
+                document.querySelector('.right').style.right = 0;
+            }, 1500);
+        }
+        render() {
+            this.handleShow()
+            return <div className="right"></div>;
+        }
+    }
+    class Wrap extends React.Component {
+        render() {
+            return <div className="wrap">
+                <LeftBlock />
+                <RightBlock />
+            </div>;
+        }
+    }
+    ReactDOM.render(
+            <Wrap />,
+        document.getElementById("container")
+    )
+</script>
+</body>
+</html>
