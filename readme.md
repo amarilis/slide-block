@@ -8,9 +8,3 @@ index.html
 function-animate.html
 - react component
 - style.css
-
----
-
-react-animate.html
-- react component
-- style.css
